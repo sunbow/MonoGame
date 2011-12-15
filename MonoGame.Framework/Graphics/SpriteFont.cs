@@ -62,7 +62,18 @@ namespace Microsoft.Xna.Framework.Graphics
 				}
 			}
         }
-
+		
+		public System.Collections.ObjectModel.ReadOnlyCollection<char> Characters 
+		{
+			get
+			{
+				List<char> tmp = new List<char>();
+				tmp.AddRange(characterData.Keys);
+				
+				return tmp.AsReadOnly();
+			}
+		}
+		
         public Vector2 MeasureString(string text)
         {
            	Vector2 v = Vector2.Zero;

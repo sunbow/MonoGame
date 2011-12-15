@@ -145,6 +145,28 @@ namespace Microsoft.Xna.Framework.Input
 				return ButtonState.Released;
 			}
 		}
+		
+		public override bool Equals (object obj)
+		{
+			if(obj is MouseState)
+				return this == (MouseState)obj;
+			else
+				return false;
+		}
+				
+		public static bool operator == (MouseState first, MouseState second)
+		{
+			return first._x == second._x
+				&& first._y == second._y 
+				&& first._leftButton == second._leftButton 
+				&& first._middleButton == second._middleButton 
+				&& first._rightButton == second._rightButton;
+		}
+		
+		public static bool operator != (MouseState first, MouseState second)
+		{
+			return !(first == second);	
+		}	
     }
 }
 
