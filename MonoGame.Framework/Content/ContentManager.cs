@@ -87,7 +87,7 @@ namespace Microsoft.Xna.Framework.Content
         {
         }
 		
-        public T Load<T>(string assetName)
+        public virtual T Load<T>(string assetName)
         {			
 			string originalAssetName = assetName;
 			object result = null;

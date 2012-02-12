@@ -386,6 +386,10 @@ namespace Microsoft.Xna.Framework
                 }
                 return _content;
             }
+			set
+			{
+                _content = value;
+            }
         }
 		
 		internal GraphicsDeviceManager graphicsDeviceManager {
